@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Portfolio</title>
+  <!-- Google Fonts: Dancing Script for headings, Inter for body -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html { font-family: 'Inter', sans-serif; }
+    .font-heading { font-family: 'Dancing Script', cursive; }
+    /* Section fade-in on scroll */
+    .section-fade {
+      opacity: 0;
+      transform: translateY(60px) scale(0.98);
+      transition: opacity 1s cubic-bezier(.4,0,.2,1), transform 1s cubic-bezier(.4,0,.2,1);
+      will-change: opacity, transform;
+    }
+    .section-fade.visible {
+      opacity: 1;
+      transform: none;
+    }
+    /* For smooth section transitions */
+    section { scroll-margin-top: 80px; }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-indigo-50 via-white to-pink-50 min-h-screen text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur shadow-md px-6 py-4 flex justify-between items-center">
+    <div class="font-heading text-2xl md:text-3xl text-indigo-700 tracking-tight">Sathvik</div>
+    <ul class="flex gap-8 font-semibold text-gray-800 text-lg">
+      <li>
+        <a href="#hero" class="relative transition-colors duration-200 hover:text-pink-500 after:content-[''] after:block after:h-0.5 after:bg-pink-400 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left">
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="#about" class="relative transition-colors duration-200 hover:text-pink-500 after:content-[''] after:block after:h-0.5 after:bg-pink-400 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left">
+          About
+        </a>
+      </li>
+      <li>
+        <a href="#projects" class="relative transition-colors duration-200 hover:text-pink-500 after:content-[''] after:block after:h-0.5 after:bg-pink-400 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left">
+          Projects
+        </a>
+      </li>
+      <li>
+        <a href="#skills" class="relative transition-colors duration-200 hover:text-pink-500 after:content-[''] after:block after:h-0.5 after:bg-pink-400 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left">
+          Skills
+        </a>
+      </li>
+      <li>
+        <a href="#contact" class="relative transition-colors duration-200 hover:text-pink-500 after:content-[''] after:block after:h-0.5 after:bg-pink-400 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left">
+          Contact
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="section-fade min-h-screen flex flex-col justify-center items-center text-center px-4">
+    <div class="absolute inset-0 -z-10">
+      <div class="w-full h-full bg-gradient-to-tr from-indigo-200 via-pink-100 to-orange-100 blur-2xl opacity-80"></div>
+    </div>
+    <h1 class="font-heading text-5xl md:text-7xl font-bold text-indigo-700 mb-4">Hello, I'm <span class="text-pink-500">Sathvik</span></h1>
+    <p class="text-xl md:text-2xl text-gray-700 mb-8">Creative Developer & UI Enthusiast</p>
+    <a href="#projects" class="inline-block px-10 py-3 bg-gradient-to-r from-indigo-500 to-pink-500 text-white font-semibold rounded-full shadow-2xl transition-all hover:scale-105 hover:shadow-pink-200 focus:outline-none focus:ring-4 focus:ring-pink-200">
+      Explore My Work
+    </a>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="section-fade max-w-5xl mx-auto py-20 px-4 md:px-8">
+    <div class="bg-white/80 backdrop-blur rounded-2xl shadow-2xl flex flex-col justify-center gap-10 p-8 md:p-12 transition-all hover:shadow-pink-200">
+      <h2 class="font-heading text-4xl text-indigo-700 mb-2">About Me</h2>
+      <h3 class="text-xl font-semibold text-pink-500 mb-2">Frontend Developer & Designer</h3>
+      <p class="text-lg text-gray-700 mb-4">
+        I am a passionate learner and aspiring full-stack developer with a strong foundation in Data Structures, Algorithms, and modern web technologies. My journey is driven by curiosity and a desire to build scalable, efficient, and impactful applications.
+        <br><br>
+        Skilled in Java, C++, JavaScript, HTML, CSS (Tailwind), React, and Node.js, I enjoy applying my knowledge to real-world projects and writing clean, maintainable code.
+        <br><br>
+        I thrive in collaborative, fast-paced environments and value communication, adaptability, and continuous growth. Currently, I’m expanding my skills in DevOps and working on projects that blend technology with culture, like a platform celebrating Indian Heritage.
+        <br><br>
+        I’m always eager to connect, learn, and create meaningful solutions with like-minded people.
+      </p>
+      <div class="flex gap-4 mt-2">
+        <a href="https://www.linkedin.com/in/vure-sathvik" class="text-indigo-600 hover:text-indigo-800 transition" title="LinkedIn" target="_blank" rel="noopener">
+          <!-- LinkedIn SVG -->
+          <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M22.23 0H1.77C.792 0 0 .774 0 1.729v20.542C0 23.226.792 24 1.77 24h20.46C23.208 24 24 23.226 24 22.271V1.729C24 .774 23.208 0 22.23 0zM7.12 20.452H3.56V9h3.56v11.452zM5.34 7.633a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zm15.112 12.819h-3.56v-5.605c0-1.336-.027-3.057-1.865-3.057-1.867 0-2.153 1.457-2.153 2.963v5.699h-3.56V9h3.418v1.561h.049c.477-.902 1.637-1.852 3.37-1.852 3.602 0 4.267 2.37 4.267 5.455v6.288z"/></svg>
+        </a>
+        <a href="https://github.com/VURE-SATHVIK-22" class="text-gray-900 hover:text-gray-700 transition" title="GitHub" target="_blank" rel="noopener">
+          <!-- GitHub SVG -->
+          <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23a11.52 11.52 0 0 1 3.003-.404c1.018.005 2.045.138 3.003.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.372.823 1.102.823 2.222 0 1.606-.015 2.898-.015 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </a>
+        <a href="https://www.instagram.com/your-instagram-username" class="text-pink-600 hover:text-pink-800 transition" title="Instagram" target="_blank" rel="noopener">
+          <!-- Instagram SVG -->
+          <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.974.974 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.974.974-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.974-.974-1.246-2.242-1.308-3.608C2.175 15.647 2.163 15.267 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608C4.515 2.567 5.783 2.295 7.149 2.233 8.415 2.175 8.795 2.163 12 2.163zm0-2.163C8.741 0 8.332.014 7.052.072 5.771.13 4.659.392 3.678 1.373 2.697 2.354 2.435 3.466 2.377 4.747 2.319 6.027 2.305 6.436 2.305 12c0 5.564.014 5.973.072 7.253.058 1.281.32 2.393 1.301 3.374.981.981 2.093 1.243 3.374 1.301 1.28.058 1.689.072 7.253.072s5.973-.014 7.253-.072c1.281-.058 2.393-.32 3.374-1.301.981-.981 1.243-2.093 1.301-3.374.058-1.28.072-1.689.072-7.253s-.014-5.973-.072-7.253c-.058-1.281-.32-2.393-1.301-3.374C21.393.392 20.281.13 19 .072 17.719.014 17.309 0 14.05 0h-4.1zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section-fade max-w-6xl mx-auto py-20 px-4 md:px-8">
+    <h2 class="font-heading text-4xl text-indigo-700 mb-10 text-center">Projects</h2>
+    <div class="flex justify-center mb-10">
+      <a href="projects.html" class="px-8 py-3 bg-gradient-to-r from-indigo-500 to-pink-500 text-white font-semibold rounded-full shadow-lg transition-all hover:scale-105 hover:shadow-pink-200 focus:outline-none focus:ring-4 focus:ring-pink-200 text-lg">
+        View All Projects
+      </a>
+    </div>
+    <div class="grid md:grid-cols-3 gap-10">
+      <!-- Project Card 1 -->
+      <div class="bg-white/90 backdrop-blur rounded-2xl shadow-2xl overflow-hidden flex flex-col transition-all hover:scale-105 hover:shadow-pink-200 card-animate">
+        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="SustainNet" class="h-48 w-full object-cover">
+        <div class="p-6 flex-1 flex flex-col">
+          <h3 class="font-semibold text-xl text-indigo-700 mb-2">SustainNet – AI + IoT Smart Ecosystem</h3>
+          <p class="text-gray-700 mb-4 flex-1">
+            🏆 Secured Top 5 at Vignan Institute of Technology Hackathon.<br>
+            Smart ecosystem using AI & IoT for energy, water, and waste management. Real-time dashboards and automation for sustainability.
+          </p>
+          <div class="flex gap-2 mb-4">
+            <span class="bg-indigo-100 text-indigo-700 text-xs px-2 py-1 rounded-full font-semibold">AI</span>
+            <span class="bg-green-100 text-green-700 text-xs px-2 py-1 rounded-full font-semibold">IoT</span>
+          </div>
+          <div class="flex gap-3">
+            <a href="projects.html" class="px-4 py-2 bg-indigo-500 text-white rounded-full font-semibold shadow transition-all hover:bg-indigo-600">Details</a>
+            <a href="https://github.com/VURE-SATHVIK-22/sustainnet" class="px-4 py-2 bg-gray-800 text-white rounded-full font-semibold shadow transition-all hover:bg-gray-900" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <!-- Project Card 2 -->
+      <div class="bg-white/90 backdrop-blur rounded-2xl shadow-2xl overflow-hidden flex flex-col transition-all hover:scale-105 hover:shadow-pink-200 card-animate">
+        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="IndiaHeritage" class="h-48 w-full object-cover">
+        <div class="p-6 flex-1 flex flex-col">
+          <h3 class="font-semibold text-xl text-pink-700 mb-2">IndiaHeritage – Cultural Discovery Platform</h3>
+          <p class="text-gray-700 mb-4 flex-1">
+            🌍 Showcasing Indian heritage, traditions, and stories. Interactive map, cultural highlights, and support for local artisans.
+          </p>
+          <div class="flex gap-2 mb-4">
+            <span class="bg-pink-100 text-pink-700 text-xs px-2 py-1 rounded-full font-semibold">Web</span>
+            <span class="bg-orange-100 text-orange-700 text-xs px-2 py-1 rounded-full font-semibold">Culture</span>
+          </div>
+          <div class="flex gap-3">
+            <a href="projects.html" class="px-4 py-2 bg-pink-500 text-white rounded-full font-semibold shadow transition-all hover:bg-pink-600">Details</a>
+            <a href="https://github.com/VURE-SATHVIK-22/indiaheritage" class="px-4 py-2 bg-gray-800 text-white rounded-full font-semibold shadow transition-all hover:bg-gray-900" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <!-- Project Card 3 -->
+      <div class="bg-white/90 backdrop-blur rounded-2xl shadow-2xl overflow-hidden flex flex-col transition-all hover:scale-105 hover:shadow-pink-200 card-animate">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="FinanFlow AI" class="h-48 w-full object-cover">
+        <div class="p-6 flex-1 flex flex-col">
+          <h3 class="font-semibold text-xl text-orange-700 mb-2">FinanFlow AI – Personal Finance Tracker</h3>
+          <p class="text-gray-700 mb-4 flex-1">
+            💰 Smart budgeting, expense tracking, and AI-generated financial tips. Modern dashboard with authentication and analytics.
+          </p>
+          <div class="flex gap-2 mb-4">
+            <span class="bg-orange-100 text-orange-700 text-xs px-2 py-1 rounded-full font-semibold">Finance</span>
+            <span class="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full font-semibold">AI</span>
+          </div>
+          <div class="flex gap-3">
+            <a href="projects.html" class="px-4 py-2 bg-orange-500 text-white rounded-full font-semibold shadow transition-all hover:bg-orange-600">Details</a>
+            <a href="https://github.com/VURE-SATHVIK-22/finanflow-ai" class="px-4 py-2 bg-gray-800 text-white rounded-full font-semibold shadow transition-all hover:bg-gray-900" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <!-- ...other project cards if any... -->
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section-fade max-w-4xl mx-auto py-20 px-4 md:px-8">
+    <div class="bg-white/80 backdrop-blur rounded-2xl shadow-2xl p-10 md:p-16">
+      <h2 class="font-heading text-4xl text-indigo-700 mb-8">Skills</h2>
+      <div class="grid md:grid-cols-2 gap-8 text-lg">
+        <div>
+          <h3 class="text-xl font-bold text-indigo-700 mb-2">Backend Development</h3>
+          <ul class="list-disc ml-6 space-y-1">
+            <li>Java (Core Java, Spring Boot)</li>
+            <li>RESTful APIs</li>
+            <li>Node.js, Express.js</li>
+          </ul>
+          <h3 class="text-xl font-bold text-indigo-700 mt-4 mb-2">Databases</h3>
+          <ul class="list-disc ml-6 space-y-1">
+            <li>MySQL</li>
+            <li>MongoDB</li>
+          </ul>
+          <h3 class="text-xl font-bold text-indigo-700 mt-4 mb-2">UI/UX</h3>
+          <ul class="list-disc ml-6 space-y-1">
+            <li>Figma</li>
+            <li>Wix</li>
+            <li>Framer</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-indigo-700 mb-2">Tools & Platforms</h3>
+          <ul class="list-disc ml-6 space-y-1">
+            <li>Git, GitHub</li>
+            <li>VS Code, Postman, IntelliJ IDEA, Netlify</li>
+          </ul>
+          <h3 class="text-xl font-bold text-indigo-700 mt-4 mb-2">DevOps & Deployment</h3>
+          <ul class="list-disc ml-6 space-y-1">
+            <li>Basic CI/CD</li>
+            <li>Docker (beginner)</li>
+            <li>Deployment on Render/Netlify</li>
+          </ul>
+          <h3 class="text-xl font-bold text-indigo-700 mt-4 mb-2">Core CS Concepts</h3>
+          <ul class="list-disc ml-6 space-y-1">
+            <li>Data Structures and Algorithms</li>
+            <li>Object-Oriented Programming</li>
+            <li>System Design (Basics)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section-fade max-w-2xl mx-auto py-20 px-4 md:px-8">
+    <div class="bg-white/80 backdrop-blur rounded-2xl shadow-2xl p-10 md:p-16 text-center">
+      <h2 class="font-heading text-4xl text-indigo-700 mb-6">Contact</h2>
+      <p class="text-gray-700 text-lg mb-8">Want to collaborate or just say hi? Drop me a message!</p>
+      <form class="space-y-6" id="contactForm">
+        <div>
+          <input type="text" id="name" placeholder="Your Name" class="w-full px-5 py-3 rounded-xl border border-indigo-100 focus:border-pink-400 focus:ring-2 focus:ring-pink-100 bg-white/70 shadow transition-all outline-none" required>
+        </div>
+        <div>
+          <input type="email" id="email" placeholder="Your Email" class="w-full px-5 py-3 rounded-xl border border-indigo-100 focus:border-pink-400 focus:ring-2 focus:ring-pink-100 bg-white/70 shadow transition-all outline-none" required>
+        </div>
+        <div>
+          <textarea id="message" placeholder="Your Message" rows="4" class="w-full px-5 py-3 rounded-xl border border-indigo-100 focus:border-pink-400 focus:ring-2 focus:ring-pink-100 bg-white/70 shadow transition-all outline-none resize-none" required></textarea>
+        </div>
+        <button type="submit" class="px-10 py-3 bg-gradient-to-r from-indigo-500 to-pink-500 text-white font-semibold rounded-full shadow-2xl transition-all hover:scale-105 hover:shadow-pink-200 focus:outline-none focus:ring-4 focus:ring-pink-200">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="w-full bg-gray-900 text-gray-300 py-6 border-t border-gray-800 mt-10">
+    <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between px-6 gap-4">
+      <div class="flex items-center gap-2 font-heading text-xl text-pink-200">
+        <span>Sathvik</span>
+        <span class="hidden md:inline-block text-gray-500">|</span>
+        <span class="text-sm font-normal text-gray-400 md:ml-2">&copy; 2025</span>
+      </div>
+      <div class="flex gap-4 mt-2 md:mt-0">
+        <a href="https://www.linkedin.com/in/your-linkedin-username" class="hover:text-pink-400 transition" title="LinkedIn">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.23 0H1.77C.792 0 0 .774 0 1.729v20.542C0 23.226.792 24 1.77 24h20.46C23.208 24 24 23.226 24 22.271V1.729C24 .774 23.208 0 22.23 0zM7.12 20.452H3.56V9h3.56v11.452zM5.34 7.633a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zm15.112 12.819h-3.56v-5.605c0-1.336-.027-3.057-1.865-3.057-1.867 0-2.153 1.457-2.153 2.963v5.699h-3.56V9h3.418v1.561h.049c.477-.902 1.637-1.852 3.37-1.852 3.602 0 4.267 2.37 4.267 5.455v6.288z"/></svg>
+        </a>
+        <a href="https://github.com/your-github-username" class="hover:text-pink-400 transition" title="GitHub">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.416-4.042-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.084-.729.084-.729 1.205.084 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23a11.52 11.52 0 0 1 3.003-.404c1.018.005 2.045.138 3.003.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.242 2.873.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.803 5.624-5.475 5.921.43.372.823 1.102.823 2.222 0 1.606-.015 2.898-.015 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </a>
+        <a href="https://www.instagram.com/your-instagram-username" class="hover:text-pink-400 transition" title="Instagram">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.974.974 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.974.974-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.974-.974-1.246-2.242-1.308-3.608C2.175 15.647 2.163 15.267 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608C4.515 2.567 5.783 2.295 7.149 2.233 8.415 2.175 8.795 2.163 12 2.163zm0-2.163C8.741 0 8.332.014 7.052.072 5.771.13 4.659.392 3.678 1.373 2.697 2.354 2.435 3.466 2.377 4.747 2.319 6.027 2.305 6.436 2.305 12c0 5.564.014 5.973.072 7.253.058 1.281.32 2.393 1.301 3.374.981.981 2.093 1.243 3.374 1.301 1.28.058 1.689.072 7.253.072s5.973-.014 7.253-.072c1.281-.058 2.393-.32 3.374-1.301.981-.981 1.243-2.093 1.301-3.374.058-1.28.072-1.689.072-7.253s-.014-5.973-.072-7.253c-.058-1.281-.32-2.393-1.301-3.374C21.393.392 20.281.13 19 .072 17.719.014 17.309 0 14.05 0h-4.1zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm6.406-11.845a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Section fade-in on scroll -->
+  <script>
+    // Intersection Observer for section fade-in
+    document.addEventListener('DOMContentLoaded', function () {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.18 });
+
+      document.querySelectorAll('.section-fade').forEach(section => {
+        observer.observe(section);
+      });
+    });
+
+    // Contact form handler
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = encodeURIComponent(document.getElementById('name').value);
+      const email = encodeURIComponent(document.getElementById('email').value);
+      const message = encodeURIComponent(document.getElementById('message').value);
+      const mailto = `mailto:vuresathvik22@gmail.com?subject=Contact from ${name} (${email})&body=${message}`;
+      window.location.href = mailto;
+    });
+  </script>
+</body>
+</html>
